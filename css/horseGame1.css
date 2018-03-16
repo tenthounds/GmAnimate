@@ -1,0 +1,362 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.toggle-racing-container{
+    position: absolute;
+    left: 40px;
+    background-color: #DBDBDB;
+    z-index: 11;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    padding: 3px 70px ;
+    border: 1px solid #DBDBDB;
+    cursor: pointer;
+    border-radius:0 0 25px 25px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+.toggle-racing-container::after{
+    position: absolute;
+    top: 9px;
+    left: 128px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #999;
+}
+.close-racing-btn::after{
+    border-bottom:none;
+    border-top: 6px solid #999;
+}
+.toggle-racing-container:hover{
+    background-color: #ccc;
+    border-color:#ccc;
+}
+.mt-racing{
+    margin-top: 35px;
+}
+.racing-container{
+    width:890px;
+    height:612px;
+    box-sizing: border-box;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: url("../horse1/line-bg.jpg") repeat-x 445px 0;
+}
+.bg-line{
+    width:225px;
+    height: 311px;
+    position: absolute;
+    top:165px;
+}
+/*.lane{
+    width:74px;
+    height: 414px;
+    position: absolute;
+    top: 83px;
+    right: 120px;
+    background: url(../horse1/lane.png) no-repeat right top;
+    z-index: 1;
+}*/
+.bg-begin{
+    margin-left: 664px;
+    background: url(../horse1/line-start.png) no-repeat right top;
+}
+.bg-end{
+    margin-left: -50px;
+    top:278px;
+    background: url(../horse1/line-finish.png) no-repeat right top;
+    -webkit-animation: bg-end-move 200ms linear;
+    -moz-animation: bg-end-move 200ms linear;
+}
+@media screen and (max-width: 1279px){
+    .bg-begin{
+        margin-left: 764px;
+    }
+    .bg-end{
+        margin-left: 0px;
+        top:275px;
+    }
+    .racing-container{
+        width: 990px;
+        height: 612px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        background: url(../horse1/line-bg-l.jpg) repeat-x 495px 0;
+    }
+    .lane{
+        right: 180px;
+    }
+    .bg-runway{
+        margin-left: 5px;
+    }
+}
+.bg{
+    width: 884px;
+    height: 100%;
+    margin: 0 auto;
+}
+@keyframes bgmove{
+    from { background-position: 0px 0px; }
+    to { background-position: 100% 0px; }
+}
+@-webkit-keyframes bgmove {
+    from { background-position: 0px 0px; }
+    to { background-position: 100% 0px; }
+}
+@-moz-keyframes bgmove {
+    from { background-position: 0px 0px; }
+    to { background-position: 100% 0px; }
+}
+@-ms-keyframes bgmove {
+    from { background-position: 0px 0px; }
+    to { background-position: 100% 0px; }
+}
+@-o-keyframes bgmove {
+    from { background-position: 0px 0px; }
+    to { background-position: 100% 0px; }
+}
+.bgmove{
+    webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    animation: bgmove .5s  infinite linear;
+    -webkit-animation: bgmove .6s  infinite linear;
+    -moz-animation: bgmove .6s  infinite linear;
+    -ms-animation: bgmove .6s  infinite linear;
+    -o-animation: bgmove .6s  infinite linear;
+}
+.bg-tree{
+    width:100%;
+    height: 85px;
+}
+.road-ready{
+    width: 53px;
+    height: 99px;
+    float: right;
+    margin:  10px  15px 0 0;
+    position: absolute;
+    top:-3px;
+    right:20px;
+}
+.road-ready-1{
+    background: url("../horse1/win.png") no-repeat -10px -490px;
+}
+.road-ready-2{
+    background: url("../horse1/win.png") no-repeat -10px -728px;
+}
+.road-ready-3{
+    background: url("../horse1/win.png") no-repeat -10px -609px;
+}
+.bg-runway{
+    width:100%;
+    margin-top: 71px;
+}
+@keyframes bg-end-move{
+    0% {background-position: -123px 0}
+    25% {background-position: -90px 0}
+    50% {background-position: -60px 0}
+    75% {background-position: -25px 0}
+    100% {background-position:0 0}
+}
+.bg-runway div.runway{
+    width: 100%;
+    height: 17px;
+}
+@keyframes shake{
+    0%,100%{margin-right: 0px;}
+    10%,30%,50%,70%, 90%{margin-right:-2px}
+    20%,40%,60%,80%{margin-right:2px}
+}
+@-webkit-keyframes shake{
+    0%,100%{margin-right: 0px;}
+    10%,30%,50%,70%, 90%{margin-right:-2px}
+    20%,40%,60%,80%{margin-right:2px}
+}
+@-moz-keyframes shake{
+    0%,100%{margin-right: 0px;}
+    10%,30%,50%,70%, 90%{margin-right:-2px}
+    20%,40%,60%,80%{margin-right:2px}
+}
+@-ms-keyframes shake{
+    0%,100%{margin-right: 0px;}
+    10%,30%,50%,70%, 90%{margin-right:-2px}
+    20%,40%,60%,80%{margin-right:2px}
+}
+.bg-runway div.runway .car{
+    margin-right: 3px;
+    width: 266px; height: 176px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 3px;
+    position: absolute;
+    z-index:100;
+    right:-261px;
+}
+.bg-runway div.runway #car1{
+    background: url("../horse1/horse1.png") -10px -598px;
+}
+.bg-runway div.runway #car2{
+    background: url("../horse1/horse2.png") -10px -598px;
+}
+.bg-runway div.runway #car3{
+    background: url("../horse1/horse3.png") -10px -598px;
+}
+.bg-runway div.runway #car4{
+    background: url("../horse1/horse4.png") -10px -598px;
+}
+.bg-runway div.runway #car5{
+    background: url("../horse1/horse5.png") -10px -598px;
+}
+.bg-runway div.runway #car6{
+    background: url("../horse1/horse6.png") -10px -598px;
+}
+.bg-runway div.runway #car7{
+    background: url("../horse1/horse7.png") -10px -598px;
+}
+.bg-runway div.runway #car8{
+    background: url("../horse1/horse8.png") -10px -598px;
+}
+.bg-runway div.runway #car9{
+    background: url("../horse1/horse9.png") -10px -598px;
+}
+.bg-runway div.runway #car10{
+    background: url("../horse1/horse10.png") -10px -598px;
+}
+@-webkit-keyframes horse-run{
+    10% {background-position: -10px -598px;}
+    30% {background-position: -10px -10px;}
+    60% {background-position: -10px -206px;}
+    90% {background-position: -10px -402px;}
+    100% {background-position: -10px -598px;}
+}
+.bg-runway div.runway .running{
+    -webkit-animation:horse-run 450ms infinite step-start;
+    -moz-animation:horse-run 450ms infinite step-start;
+    -ms-animation:horse-run 450ms infinite step-start;
+}
+.bg-runway div.runway .speedup{
+    -webkit-animation-duration: 350ms;
+    -moz-animation-duration: 350ms;
+    -ms-animation-duration: 350ms;
+}
+.sm-rank-bg{
+    position: absolute;
+    z-index: 101;
+    left:0;
+    top: -5px;
+    background: url("../horse1/sm-rank-bg.png") no-repeat;
+    width:67px;
+    height: 612px;
+    -webkit-animation: bg-end-move 200ms linear;
+    -moz-animation: bg-end-move 200ms linear;
+    -ms-animation: bg-end-move 200ms linear;
+}
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.2); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulse {
+    0% { -moz-transform: scale(1); }
+    50% { -moz-transform: scale(1.2); }
+    100% { -moz-transform: scale(1); }
+}
+@-ms-keyframes pulse {
+    0% { -ms-transform: scale(1); }
+    50% { -ms-transform: scale(1.2); }
+    100% { -ms-transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+.sm-rank-bg .sm-rank{
+    width: 32px;
+    height: 28px;
+    margin-top: 30px;
+    margin-left: 17px;
+    -webkit-animation: pulse 800ms linear;
+    -moz-animation: pulse 800ms linear;
+    -ms-animation: pulse 800ms linear;
+    -o-animation: pulse 800ms linear;
+    animation: pulse 800ms linear;
+}
+.sm-rank-bg .sm-rank1{
+    background:url("../horse1/win.png") -10px -58px;
+}
+.sm-rank-bg .sm-rank2{
+    background:url("../horse1/win.png") -10px -298px;
+}
+.sm-rank-bg .sm-rank3{
+    background:url("../horse1/win.png") -10px -106px;
+}
+.sm-rank-bg .sm-rank4{
+    background:url("../horse1/win.png") -10px -154px;
+}
+.sm-rank-bg .sm-rank5{
+    background:url("../horse1/win.png") -10px -202px;
+}
+.sm-rank-bg .sm-rank6{
+    background:url("../horse1/win.png") -10px -250px;
+}
+.sm-rank-bg .sm-rank7{
+    background:url("../horse1/win.png") -10px -10px;
+}
+.sm-rank-bg .sm-rank8{
+    background:url("../horse1/win.png") -10px -346px;
+}
+.sm-rank-bg .sm-rank9{
+    background:url("../horse1/win.png") -10px -394px;
+}
+.sm-rank-bg .sm-rank10{
+    background:url("../horse1/win.png") -10px -442px;
+}
+.pk10-carnum-ul  li{
+    width: 46px; height: 46px;
+    background: url('../horse1/lottery-car.png');
+}
+.pk10-carnum-ul li.bg-l_car_1 {
+    background-position: -10px -568px;
+}
+.pk10-carnum-ul li.bg-l_car_2 {
+    background-position: -10px -10px;
+}
+.pk10-carnum-ul li.bg-l_car_3 {
+    background-position: -10px -72px;
+}
+.pk10-carnum-ul li.bg-l_car_4 {
+    background-position: -10px -134px;
+}
+.pk10-carnum-ul li.bg-l_car_5 {
+    background-position: -10px -196px;
+}
+.pk10-carnum-ul li.bg-l_car_6 {
+    background-position: -10px -258px;
+}
+.pk10-carnum-ul li.bg-l_car_7 {
+    background-position: -10px -320px;
+}
+.pk10-carnum-ul li.bg-l_car_8 {
+    background-position: -10px -382px;
+}
+.pk10-carnum-ul li.bg-l_car_9 {
+    background-position: -10px -444px;
+}
+.pk10-carnum-ul li.bg-l_car_10 {
+    background-position: -10px -506px;
+}
+

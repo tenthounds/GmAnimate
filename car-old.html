@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/racingGame-old.css">
+    <style>
+        input[placeholder], [placeholder], *[placeholder] {
+            color:green;
+        }
+    </style>
+</head>
+<body>
+<div id="container" class="container">
+    <div class="bg">
+        <!--背景树-->
+        <div class="bg-tree" id="bg-tree">
+            <div class="road-ready road-ready-1"></div>
+        </div>
+        <!--跑道-->
+        <div class="bg-runway bg-begin">
+            <div class="runway">
+                <div class="car speedups" id="car1"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car2"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car3"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car4"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car5"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car6"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car7"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car8"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car9"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car10"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button onclick="start()">起跑</button>
+<button onclick="cj()">冲刺</button>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/racingGame-old.js"></script>
+<script>
+    var data=[6,7,5,8,3,1,2,9,10,4]; //后台名次数据
+    //1,2,3,4,5,6,7,8,9,10
+    var game=new racingGame();
+    game.Run();
+    function cj(){
+        game.Sprint(data);
+    }
+    function start(){
+        game.Run();
+    }
+</script>
+</html>

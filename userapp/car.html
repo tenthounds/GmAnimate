@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/racingGame.css">
+</head>
+<body>
+<div id="racing-container" class="racing-container">
+    <div id="lane" class="lane"></div>
+    <div id="bg-line" class="bg-line bg-begin"></div>
+    <div class="bg">
+        <!--背景树-->
+        <div class="bg-tree" id="bg-tree">
+            <div class="road-ready road-ready-1"></div>
+        </div>
+        <!--跑道-->
+        <div class="bg-runway ">
+            <div class="runway">
+                <div class="car car-active" id="car1"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car2"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car3"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car4"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car5"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car6"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car7"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car8"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car9"></div>
+            </div>
+            <div class="runway">
+                <div class="car car-active" id="car10"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<button onclick="start()">起跑</button>
+<button onclick="cj()">冲刺</button>
+</body>
+<script src="../js/jquery-1.9.1.js"></script>
+<script src="../js/velocity.min.js"></script>
+<script src="../js/racingGame.js"></script>
+<script>
+    var data=[6,7,5,8,3,1,2,9,10,4]; //后台名次数据
+    //1,2,3,4,5,6,7,8,9,10
+    var game=new racingGame();
+    // game.Run();
+    function cj(){
+        game.Sprint(null,data,null,null);
+    }
+    function start(){
+        game.Run();
+    }
+</script>
+</html>
